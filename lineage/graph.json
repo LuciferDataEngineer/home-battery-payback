@@ -1,0 +1,63 @@
+{
+  "producer": "https://github.com/LuciferDataEngineer/home-battery-payback",
+  "run_id": "2575342a-c221-4476-8bd0-cfc18beea69a",
+  "namespace": "home-battery-payback",
+  "nodes": [
+    "dashboard.json",
+    "gold.daily_spread",
+    "gold.payback",
+    "gold.uptake",
+    "iceberg.gold.payback",
+    "iceberg.silver.battery_month",
+    "silver.battery_month",
+    "snapshot.abs_poa_dwellings",
+    "snapshot.aemo_price_demand",
+    "snapshot.cer_battery_capacity",
+    "snapshot.cer_battery_installations",
+    "snapshot.cer_solar_installations"
+  ],
+  "edges": [
+    {
+      "input": "snapshot.cer_battery_installations",
+      "output": "silver.battery_month"
+    },
+    {
+      "input": "snapshot.cer_battery_capacity",
+      "output": "gold.uptake"
+    },
+    {
+      "input": "snapshot.cer_solar_installations",
+      "output": "gold.uptake"
+    },
+    {
+      "input": "snapshot.abs_poa_dwellings",
+      "output": "gold.uptake"
+    },
+    {
+      "input": "snapshot.aemo_price_demand",
+      "output": "gold.daily_spread"
+    },
+    {
+      "input": "gold.daily_spread",
+      "output": "gold.payback"
+    },
+    {
+      "input": "gold.uptake",
+      "output": "dashboard.json"
+    },
+    {
+      "input": "gold.payback",
+      "output": "dashboard.json"
+    },
+    {
+      "input": "silver.battery_month",
+      "output": "iceberg.silver.battery_month"
+    },
+    {
+      "input": "gold.payback",
+      "output": "iceberg.gold.payback"
+    }
+  ],
+  "event_count": 10,
+  "events_file": "events.jsonl"
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Where a home battery pays back</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">Home batteries</div>
+      <nav id="tabs" aria-label="Pages">
+        <button type="button" data-tab="overview" class="active" aria-selected="true">Overview</button>
+        <button type="button" data-tab="where" aria-selected="false">Where batteries are</button>
+        <button type="button" data-tab="payback" aria-selected="false">Payback by region</button>
+        <button type="button" data-tab="prices" aria-selected="false">Price swings</button>
+        <button type="button" data-tab="action" aria-selected="false">What to do</button>
+      </nav>
+    </header>
+
+    <p class="banner" id="banner"></p>
+
+    <main>
+      <section class="page active" id="page-overview" data-page="overview">
+        <div class="kpis" id="kpis"></div>
+        <article class="card">
+          <h2>Installations jumped in April, then fell after the rebate changed</h2>
+          <canvas id="chart-months" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-months"></div>
+          </details>
+        </article>
+        <aside class="means" id="means-overview"></aside>
+      </section>
+
+      <section class="page" id="page-where" data-page="where">
+        <div class="pills" id="pills-state"></div>
+        <article class="card">
+          <h2>South Australia has the most batteries for its number of homes</h2>
+          <div class="map-wrap">
+            <svg id="map" viewBox="0 0 640 560" role="img" aria-label="Map of batteries per 1,000 homes by state"></svg>
+            <div id="tip" class="tip" hidden></div>
+          </div>
+          <p class="note" id="map-note"></p>
+        </article>
+        <article class="card">
+          <h2>The same pattern, as a bar</h2>
+          <canvas id="chart-uptake" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-states"></div>
+          </details>
+        </article>
+        <article class="card">
+          <h2>Some postcodes are far ahead of their rooftop solar</h2>
+          <canvas id="chart-postcodes" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-postcodes"></div>
+          </details>
+        </article>
+        <aside class="means" id="means-where"></aside>
+      </section>
+
+      <section class="page" id="page-payback" data-page="payback">
+        <div class="pills" id="pills-size"></div>
+        <div class="pills" id="pills-scenario"></div>
+        <div class="kpis" id="pay-kpis"></div>
+        <article class="card">
+          <h2 id="pay-title">South Australia is the only place close to a 10-year payback</h2>
+          <canvas id="chart-payback" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-payback"></div>
+          </details>
+        </article>
+        <article class="card">
+          <h2>The next scheduled cut adds months, not a new winner</h2>
+          <canvas id="chart-cut" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-cut"></div>
+          </details>
+        </article>
+        <aside class="means" id="means-payback"></aside>
+      </section>
+
+      <section class="page" id="page-prices" data-page="prices">
+        <article class="card">
+          <h2>South Australian batteries earn the most from evening price spikes</h2>
+          <canvas id="chart-spread" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-spread"></div>
+          </details>
+        </article>
+        <article class="card">
+          <h2>Midday power is cheapest, and often negative, in the south</h2>
+          <canvas id="chart-hourly" height="280"></canvas>
+          <details>
+            <summary>Exact values</summary>
+            <div id="table-hourly"></div>
+          </details>
+        </article>
+        <aside class="means" id="means-prices"></aside>
+      </section>
+
+      <section class="page" id="page-action" data-page="action">
+        <div class="cards-3" id="actions"></div>
+        <aside class="means" id="means-action"></aside>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

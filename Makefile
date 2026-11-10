@@ -1,10 +1,9 @@
-.PHONY: help install lint test ingest pipeline export dashboard ci-snapshot flink-smoke kind-smoke compose-smoke
+.PHONY: help install lint test ingest pipeline export dashboard flink-test ci-snapshot
 
 PYTHON ?= python3
-UV ?= uv
 
 help:
-	@echo "Targets: install lint test ingest pipeline export dashboard ci-snapshot"
+	@echo "install lint test ingest pipeline export dashboard flink-test"
 
 install:
 	$(PYTHON) -m pip install -e ".[dev]"
@@ -13,7 +12,7 @@ lint:
 	ruff check src tests
 
 test:
-	pytest
+	pytest -m "not flink and not browser"
 
 ingest:
 	$(PYTHON) -m hbp.ingest
@@ -21,20 +20,17 @@ ingest:
 pipeline:
 	$(PYTHON) -m hbp.pipeline --from-snapshot
 
-export:
-	$(PYTHON) -m hbp.export
+export: pipeline
 
-dashboard: export
-	@echo "Dashboard JSON written to site/data/"
+dashboard: pipeline
 
-ci-snapshot: pipeline export test
+flink-test:
+	JAVA_HOME=$${JAVA_HOME:-/usr/lib/jvm/java-17-openjdk-amd64} PYTHONPATH=src pytest -m flink
 
-flink-smoke:
-	$(PYTHON) -m hbp.flink_job --source file --input data/snapshot/prices
+ci-snapshot: lint test pipeline
 
-kind-smoke:
-	@echo "kind smoke is executed by .github/workflows/ci.yml"
+compose-up:
+	docker compose up -d minio iceberg-rest trino
 
-compose-smoke:
-	docker compose -f docker-compose.yml up -d minio iceberg-rest trino
-	docker compose -f docker-compose.yml ps
+compose-smoke: compose-up
+	sh scripts/trino_smoke.sh

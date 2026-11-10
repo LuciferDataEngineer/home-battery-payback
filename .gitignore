@@ -9,6 +9,8 @@ build/
 *.egg-info/
 .dagster/
 warehouse/
+data/output/
+data/quarantine/
 tmp/
 .iceberg/
 node_modules/

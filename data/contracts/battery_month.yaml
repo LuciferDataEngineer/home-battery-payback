@@ -1,0 +1,17 @@
+name: cer_battery_month
+grain: installations of small-scale batteries in one postcode in one month
+publisher: Clean Energy Regulator
+columns:
+  - name: postcode
+    type: string
+    pattern: "^[0-9]{4}$"
+  - name: state
+    type: string
+    allowed: [NSW, VIC, QLD, SA, WA, TAS, NT, ACT]
+  - name: install_month
+    type: timestamp
+    nullable: false
+  - name: installs
+    type: integer
+    min: 0
+on_failure: quarantine the postcode-month and keep the rest

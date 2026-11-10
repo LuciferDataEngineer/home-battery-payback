@@ -30,7 +30,7 @@ jobs:
       - name: Ruff
         run: ruff check src tests
       - name: Pytest
-        run: pytest -q
+        run: pytest -m "not flink and not browser"
 
   pipeline-snapshot:
     name: pipeline from snapshot
@@ -47,5 +47,93 @@ jobs:
           python -m pip install -e ".[dev]"
       - name: Run offline pipeline
         run: python -m hbp.pipeline --from-snapshot
-      - name: Export dashboard JSON
-        run: python -m hbp.export
+      - name: Outputs exist
+        run: |
+          test -s site/data/dashboard.json
+          test -s docs/iceberg-snapshots.json
+          test -s lineage/events.jsonl
+          test -s lineage/graph.json
+          test -s benchmarks/results.json
+          python -c "import json; d=json.load(open('site/data/dashboard.json')); assert d['national']['batteries']==546789"
+
+  flink:
+    name: flink event-time job
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PyFlink
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest pyarrow
+          python -m pip install "apache-flink==2.1.1"
+      - name: Late events, hop windows, one real day
+        env:
+          PYTHONPATH: src
+        run: pytest -m flink
+
+  kind:
+    name: kind batch job
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the batch image
+        run: docker build -t hbp-batch:local .
+      - uses: helm/kind-action@v1.12.0
+        with:
+          version: v0.27.0
+      - name: Load the image and run the job
+        run: |
+          kind load docker-image hbp-batch:local
+          kubectl apply -f deploy/k8s/job.yaml
+          kubectl wait --for=condition=complete job/hbp-batch --timeout=240s
+          kubectl logs job/hbp-batch | tee kind.log
+          grep -q "GOLD_BATTERIES=546789" kind.log
+          python -c "
+          import pathlib, re
+          text = pathlib.Path('kind.log').read_text()
+          sa = float(re.search(r'GOLD_SA_AVG_SPREAD=([0-9.]+)', text).group(1))
+          tas = float(re.search(r'GOLD_TAS_AVG_SPREAD=([0-9.]+)', text).group(1))
+          assert sa > tas
+          "
+
+  compose:
+    name: iceberg rest, minio and trino
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start the lakehouse
+        run: docker compose up -d minio iceberg-rest trino
+      - name: Merge-on-read delete and a federated join
+        run: sh scripts/trino_smoke.sh
+      - name: Logs if the smoke failed
+        if: failure()
+        run: docker compose logs --tail 200
+
+  dashboard:
+    name: dashboard in a browser
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]" playwright
+          python -m playwright install --with-deps chromium
+      - name: Rebuild the dashboard JSON
+        run: python -m hbp.pipeline --light
+      - name: Open every tab
+        run: pytest tests/test_dashboard.py

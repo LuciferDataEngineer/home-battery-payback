@@ -1,0 +1,10 @@
+.git
+.venv
+data/warehouse
+data/output
+data/quarantine
+**/__pycache__
+.pytest_cache
+docs/screenshots
+lineage
+benchmarks
