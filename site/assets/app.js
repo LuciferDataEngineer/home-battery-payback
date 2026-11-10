@@ -114,33 +114,73 @@ function drawGrouped(canvas, labels, a, b, nameA, nameB) {
   const max = Math.max(...a, ...b, 1) * 1.18;
   const slot = (width - pad.l - pad.r) / labels.length;
   ctx.font = "12px Segoe UI, sans-serif";
+  const sample = ctx.measureText("0123456789.");
+  const ascent = sample.actualBoundingBoxAscent || 9;
+  const descent = sample.actualBoundingBoxDescent || 2;
+  const labelLine = Math.ceil(ascent + descent + 3);
   ctx.textAlign = "center";
   labels.forEach((label, i) => {
     const barW = Math.min(18, slot * 0.28);
     const base = pad.l + slot * i + slot / 2;
-    [a[i], b[i]].forEach((value, series) => {
+    const drawn = [a[i], b[i]].map((value, series) => {
       const x = base + (series === 0 ? -barW - 2 : 2);
       const h = ((height - pad.t - pad.b) * value) / max;
       const y = height - pad.b - h;
       ctx.fillStyle = series === 0 ? "#2ee6c7" : "#f5b942";
       ctx.beginPath();
-      ctx.roundRect(x, y, barW, h, 4);
+      ctx.roundRect(x, y, barW, Math.max(h, 1), 4);
       ctx.fill();
+      return { text: num.format(value), cx: x + barW / 2, baseline: y - 4, top: y };
+    });
+    // The paired bars are only a few pixels apart, so labels on one baseline
+    // collide. Lift the longer payback by a line, including short pairs such
+    // as 9.3 and 9.8 that would otherwise sit a hair apart.
+    const box = (item) => {
+      const w = ctx.measureText(item.text).width;
+      return {
+        left: item.cx - w / 2,
+        right: item.cx + w / 2,
+        top: item.baseline - ascent,
+        bottom: item.baseline + descent,
+      };
+    };
+    const crowded = (p, q) =>
+      p.left < q.right + 8 && q.left < p.right + 8 && p.top < q.bottom + 2 && q.top < p.bottom + 2;
+    const higher = drawn[0].top <= drawn[1].top ? 0 : 1;
+    const legendClearance = 15 + descent + 4;
+    const fitsAboveLegend = () => drawn[higher].baseline - labelLine - ascent >= legendClearance;
+    if (fitsAboveLegend()) drawn[higher].baseline -= labelLine;
+    let guard = 0;
+    while (crowded(box(drawn[0]), box(drawn[1])) && fitsAboveLegend() && guard < 3) {
+      drawn[higher].baseline -= labelLine;
+      guard += 1;
+    }
+    drawn.forEach((item) => {
       ctx.fillStyle = "#e8eef6";
-      ctx.fillText(num.format(value), x + barW / 2, y - 4);
+      ctx.fillText(item.text, item.cx, item.baseline);
     });
     ctx.fillStyle = "#9aabbd";
     ctx.fillText(label, base, height - 28);
   });
   ctx.textAlign = "left";
-  ctx.fillStyle = "#2ee6c7";
-  ctx.fillRect(pad.l, 6, 10, 10);
-  ctx.fillStyle = "#e8eef6";
-  ctx.fillText(nameA, pad.l + 14, 15);
-  ctx.fillStyle = "#f5b942";
-  ctx.fillRect(pad.l + 150, 6, 10, 10);
-  ctx.fillStyle = "#e8eef6";
-  ctx.fillText(nameB, pad.l + 164, 15);
+  const legend = [
+    { colour: "#2ee6c7", text: nameA },
+    { colour: "#f5b942", text: nameB },
+  ];
+  let legendX = pad.l;
+  let legendBaseline = 15;
+  legend.forEach((item) => {
+    const textW = ctx.measureText(item.text).width;
+    if (legendX > pad.l && legendX + 14 + textW > width - 8) {
+      legendX = pad.l;
+      legendBaseline += labelLine;
+    }
+    ctx.fillStyle = item.colour;
+    ctx.fillRect(legendX, legendBaseline - 9, 10, 10);
+    ctx.fillStyle = "#e8eef6";
+    ctx.fillText(item.text, legendX + 14, legendBaseline);
+    legendX += 14 + textW + 16;
+  });
 }
 
 function drawLines(canvas, hours, series) {
