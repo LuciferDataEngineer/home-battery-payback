@@ -1,0 +1,47 @@
+[project]
+name = "home-battery-payback"
+version = "0.1.0"
+description = "Where Australia's home-battery rebate is landing, and where a battery pays back from NEM price spreads."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "LuciferDataEngineer" }]
+dependencies = [
+  "duckdb>=1.1.0",
+  "pyarrow>=17.0.0",
+  "pandas>=2.2.0",
+  "pyiceberg>=0.8.0",
+  "dagster>=1.9.0",
+  "pandera>=0.21.0",
+  "openlineage-python>=1.24.0",
+  "requests>=2.32.0",
+  "pyyaml>=6.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "ruff>=0.7.0",
+  "pre-commit>=4.0.0",
+]
+flink = [
+  "apache-flink>=1.20.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
