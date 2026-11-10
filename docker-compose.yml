@@ -52,7 +52,7 @@ services:
       - "8181:8181"
 
   trino:
-    image: trinodb/trino:455
+    image: trinodb/trino:476
     depends_on:
       - iceberg-rest
     ports:

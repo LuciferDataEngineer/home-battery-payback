@@ -6,7 +6,7 @@
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
 [![Flink](https://img.shields.io/badge/Flink-2.1-orange)](src/hbp/flink_job.py)
 [![Iceberg](https://img.shields.io/badge/Iceberg-REST%20%2B%20PyIceberg-blue)](src/hbp/iceberg_store.py)
-[![Trino](https://img.shields.io/badge/Trino-455-blue)](docker-compose.yml)
+[![Trino](https://img.shields.io/badge/Trino-476-blue)](docker-compose.yml)
 [![DuckDB](https://img.shields.io/badge/DuckDB-marts-yellow)](src/hbp/analytics.py)
 
 **Live dashboard:** https://luciferdataengineer.github.io/home-battery-payback/
