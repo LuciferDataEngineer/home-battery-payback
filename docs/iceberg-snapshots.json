@@ -1,0 +1,85 @@
+{
+  "catalog": "sqlite",
+  "warehouse": "/workspace/data/warehouse",
+  "format_version": 2,
+  "delete_mode_requested": "merge-on-read",
+  "delete_mode_actual": "PyIceberg 0.12 rewrites the affected data file (copy-on-write) and warns that merge-on-read equality deletes are not implemented yet. Trino in docker-compose applies write.delete.mode=merge-on-read for real.",
+  "partitioning": {
+    "silver.battery_month": "month(install_month) hidden partition",
+    "gold.payback": "identity(scenario) hidden partition"
+  },
+  "schema_evolution": {
+    "table": "silver.battery_month",
+    "added_column": "revision_note",
+    "snapshot_before_column": 6541996738947366007
+  },
+  "correction_drill": {
+    "postcode": "2765",
+    "install_month": "2026-09-01",
+    "cer_installs": 112,
+    "drilled_installs": 113,
+    "snapshot_after_append": 6541996738947366007,
+    "snapshot_drilled": 1394947502398552521,
+    "snapshot_restored": 5332220188661736840,
+    "drilled_rows_for_postcode_month": 113,
+    "restored_installs": 112,
+    "note": "The drilled snapshot is a one-installation fiction used to show a row-level update. The restored snapshot matches the CER file. It is not a published statistic."
+  },
+  "tables": {
+    "bronze.battery_month": [
+      {
+        "snapshot_id": 2986934061364153188,
+        "parent_snapshot_id": null,
+        "operation": "Operation.APPEND",
+        "added_records": "37335",
+        "deleted_records": null
+      }
+    ],
+    "silver.battery_month": [
+      {
+        "snapshot_id": 6541996738947366007,
+        "parent_snapshot_id": null,
+        "operation": "Operation.APPEND",
+        "added_records": "37335",
+        "deleted_records": null
+      },
+      {
+        "snapshot_id": 6093203087389443134,
+        "parent_snapshot_id": 6541996738947366007,
+        "operation": "Operation.OVERWRITE",
+        "added_records": "2488",
+        "deleted_records": "2489"
+      },
+      {
+        "snapshot_id": 1394947502398552521,
+        "parent_snapshot_id": 6093203087389443134,
+        "operation": "Operation.APPEND",
+        "added_records": "1",
+        "deleted_records": null
+      },
+      {
+        "snapshot_id": 3622261582890832504,
+        "parent_snapshot_id": 1394947502398552521,
+        "operation": "Operation.DELETE",
+        "added_records": null,
+        "deleted_records": "1"
+      },
+      {
+        "snapshot_id": 5332220188661736840,
+        "parent_snapshot_id": 3622261582890832504,
+        "operation": "Operation.APPEND",
+        "added_records": "1",
+        "deleted_records": null
+      }
+    ],
+    "gold.payback": [
+      {
+        "snapshot_id": 281043450934130705,
+        "parent_snapshot_id": null,
+        "operation": "Operation.APPEND",
+        "added_records": "20",
+        "deleted_records": null
+      }
+    ]
+  }
+}

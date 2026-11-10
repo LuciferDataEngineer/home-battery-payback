@@ -1,0 +1,23 @@
+{
+  "machine": "local or GitHub-hosted runner, $0",
+  "price_rows": 525600,
+  "duckdb_day_agg_ms": 50.65,
+  "duckdb_day_groups": 1825,
+  "pyarrow_day_agg_ms": 171.26,
+  "pyarrow_day_groups": 1825,
+  "correction": {
+    "rows_in_file": 9000,
+    "copy_on_write_rewrite_ms": 2.46,
+    "copy_on_write_bytes": 97778,
+    "merge_on_read_key_write_ms": 0.26,
+    "merge_on_read_key_bytes": 506,
+    "note": "Copy-on-write rewrites the surviving rows. Merge-on-read, on the write path, stores the deleted key. PyIceberg 0.12 falls back to copy-on-write; Trino honours write.delete.mode=merge-on-read in the compose stack."
+  },
+  "flink": {
+    "job": "tumble 1 day, one region, one day of real 5-minute prices",
+    "rows": 288,
+    "ms": 7171.0,
+    "note": "PyFlink 2.1.1 local mini cluster, Java 17. Startup dominates. The lateness test is separate and asserts window contents."
+  },
+  "trino": null
+}

@@ -1,0 +1,22 @@
+name: nem_price_interval
+grain: one 5-minute settlement interval in one NEM region
+publisher: Australian Energy Market Operator
+columns:
+  - name: region
+    type: string
+    allowed: [NSW1, QLD1, VIC1, SA1, TAS1]
+  - name: ts
+    type: timestamp
+    nullable: false
+    description: Interval end, NEM time (AEST all year).
+  - name: rrp
+    type: double
+    min: -1000.01
+    max: 25000
+    description: Regional reference price, Australian dollars per megawatt-hour.
+  - name: demand
+    type: double
+    min: -5000
+    max: 20000
+    description: Regional demand. Negative values occur when rooftop solar exceeds local demand.
+on_failure: quarantine the interval and keep the rest

@@ -1,0 +1,1316 @@
+{
+  "as_of_label": "11 November 2026, 09:33 AEDT",
+  "headline": "Validated home batteries fell from 87,128 in April 2026 to 23,679 in May, the month the federal discount was cut back above 14 kWh. Using only wholesale price swings, a 10 kWh battery takes about 10 years to pay for itself in South Australia and about 34 years in Tasmania.",
+  "kpis": [
+    {
+      "value": "546,789",
+      "label": "Validated home batteries",
+      "detail": "Certificates approved from 1 July 2025 to 30 Sep 2026. Later installs are still being lodged.",
+      "status": "green"
+    },
+    {
+      "value": "15.3 GWh",
+      "label": "Usable storage on those batteries",
+      "detail": "About 28 kWh of usable storage each, on average.",
+      "status": "green"
+    },
+    {
+      "value": "88 vs 19",
+      "label": "Batteries per 1,000 homes, SA and the NT",
+      "detail": "Homes are occupied private dwellings from the 2021 Census, so new estates look fuller than they are.",
+      "status": "amber"
+    },
+    {
+      "value": "$760",
+      "label": "Wholesale earnings, 10 kWh in South Australia",
+      "detail": "Over 365 days. The same battery earned $217 in Tasmania.",
+      "status": "amber"
+    },
+    {
+      "value": "73%",
+      "label": "Fewer batteries in May 2026 than in April",
+      "detail": "The fuller discount ended on 1 May 2026. September is still incomplete, so it is not in this comparison.",
+      "status": "red"
+    }
+  ],
+  "months": [
+    {
+      "month": "2025-07",
+      "label": "Jul 2025",
+      "installs": 29523,
+      "provisional": false
+    },
+    {
+      "month": "2025-08",
+      "label": "Aug 2025",
+      "installs": 25804,
+      "provisional": false
+    },
+    {
+      "month": "2025-09",
+      "label": "Sep 2025",
+      "installs": 31137,
+      "provisional": false
+    },
+    {
+      "month": "2025-10",
+      "label": "Oct 2025",
+      "installs": 36732,
+      "provisional": false
+    },
+    {
+      "month": "2025-11",
+      "label": "Nov 2025",
+      "installs": 38714,
+      "provisional": false
+    },
+    {
+      "month": "2025-12",
+      "label": "Dec 2025",
+      "installs": 45398,
+      "provisional": false
+    },
+    {
+      "month": "2026-01",
+      "label": "Jan 2026",
+      "installs": 28606,
+      "provisional": false
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb 2026",
+      "installs": 40809,
+      "provisional": false
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar 2026",
+      "installs": 55342,
+      "provisional": false
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr 2026",
+      "installs": 87128,
+      "provisional": false
+    },
+    {
+      "month": "2026-05",
+      "label": "May 2026",
+      "installs": 23679,
+      "provisional": false
+    },
+    {
+      "month": "2026-06",
+      "label": "Jun 2026",
+      "installs": 29795,
+      "provisional": false
+    },
+    {
+      "month": "2026-07",
+      "label": "Jul 2026",
+      "installs": 31769,
+      "provisional": true
+    },
+    {
+      "month": "2026-08",
+      "label": "Aug 2026",
+      "installs": 27498,
+      "provisional": true
+    },
+    {
+      "month": "2026-09",
+      "label": "Sep 2026",
+      "installs": 14855,
+      "provisional": true
+    }
+  ],
+  "states": [
+    {
+      "code": "SA",
+      "name": "South Australia",
+      "batteries": 60458,
+      "dwellings": 690770,
+      "per_1000": 87.5,
+      "solar": 468640,
+      "per_1000_solar": 129.0,
+      "gwh": 1.57,
+      "nem_region": "SA1",
+      "in_nem": true,
+      "published_gap": -1
+    },
+    {
+      "code": "NSW",
+      "name": "New South Wales",
+      "batteries": 187154,
+      "dwellings": 2900391,
+      "per_1000": 64.5,
+      "solar": 1199500,
+      "per_1000_solar": 156.0,
+      "gwh": 5.6,
+      "nem_region": "NSW1",
+      "in_nem": true,
+      "published_gap": -87
+    },
+    {
+      "code": "WA",
+      "name": "Western Australia",
+      "batteries": 61210,
+      "dwellings": 964954,
+      "per_1000": 63.4,
+      "solar": 589442,
+      "per_1000_solar": 103.8,
+      "gwh": 1.32,
+      "nem_region": null,
+      "in_nem": false,
+      "published_gap": 0
+    },
+    {
+      "code": "ACT",
+      "name": "Australian Capital Territory",
+      "batteries": 10310,
+      "dwellings": 168534,
+      "per_1000": 61.2,
+      "solar": 69259,
+      "per_1000_solar": 148.9,
+      "gwh": 0.29,
+      "nem_region": "NSW1",
+      "in_nem": true,
+      "published_gap": 26
+    },
+    {
+      "code": "QLD",
+      "name": "Queensland",
+      "batteries": 110578,
+      "dwellings": 1869668,
+      "per_1000": 59.1,
+      "solar": 1228053,
+      "per_1000_solar": 90.0,
+      "gwh": 3.17,
+      "nem_region": "QLD1",
+      "in_nem": true,
+      "published_gap": 11
+    },
+    {
+      "code": "VIC",
+      "name": "Victoria",
+      "batteries": 110029,
+      "dwellings": 2391066,
+      "per_1000": 46.0,
+      "solar": 912800,
+      "per_1000_solar": 120.5,
+      "gwh": 3.19,
+      "nem_region": "VIC1",
+      "in_nem": true,
+      "published_gap": 50
+    },
+    {
+      "code": "TAS",
+      "name": "Tasmania",
+      "batteries": 5676,
+      "dwellings": 218371,
+      "per_1000": 26.0,
+      "solar": 68389,
+      "per_1000_solar": 83.0,
+      "gwh": 0.11,
+      "nem_region": "TAS1",
+      "in_nem": true,
+      "published_gap": 0
+    },
+    {
+      "code": "NT",
+      "name": "Northern Territory",
+      "batteries": 1374,
+      "dwellings": 71312,
+      "per_1000": 19.3,
+      "solar": 26111,
+      "per_1000_solar": 52.6,
+      "gwh": 0.04,
+      "nem_region": null,
+      "in_nem": false,
+      "published_gap": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "SA1",
+      "days": 365,
+      "avg_spread": 206.9,
+      "avg_charge": -8.0,
+      "avg_discharge": 198.9,
+      "negative_pct": 28.5,
+      "negative_intervals": 30008,
+      "annual_value_10kwh": 760.0,
+      "days_paid_to_charge": 234
+    },
+    {
+      "region": "NSW1",
+      "days": 365,
+      "avg_spread": 112.1,
+      "avg_charge": 27.3,
+      "avg_discharge": 139.5,
+      "negative_pct": 7.5,
+      "negative_intervals": 7854,
+      "annual_value_10kwh": 400.0,
+      "days_paid_to_charge": 104
+    },
+    {
+      "region": "QLD1",
+      "days": 365,
+      "avg_spread": 102.7,
+      "avg_charge": 15.9,
+      "avg_discharge": 118.6,
+      "negative_pct": 11.8,
+      "negative_intervals": 12423,
+      "annual_value_10kwh": 369.0,
+      "days_paid_to_charge": 168
+    },
+    {
+      "region": "VIC1",
+      "days": 365,
+      "avg_spread": 95.6,
+      "avg_charge": 3.3,
+      "avg_discharge": 99.0,
+      "negative_pct": 24.7,
+      "negative_intervals": 25994,
+      "annual_value_10kwh": 349.0,
+      "days_paid_to_charge": 210
+    },
+    {
+      "region": "TAS1",
+      "days": 365,
+      "avg_spread": 63.8,
+      "avg_charge": 46.6,
+      "avg_discharge": 110.4,
+      "negative_pct": 5.3,
+      "negative_intervals": 5526,
+      "annual_value_10kwh": 217.0,
+      "days_paid_to_charge": 71
+    }
+  ],
+  "payback": [
+    {
+      "region": "SA1",
+      "usable_kwh": 10,
+      "scenario": "current",
+      "household_price_aud": 7384,
+      "annual_value_aud": 760,
+      "payback_years": 9.7,
+      "stc_count": 68,
+      "stc_value_aud": 2720
+    },
+    {
+      "region": "SA1",
+      "usable_kwh": 10,
+      "scenario": "cut",
+      "household_price_aud": 7824,
+      "annual_value_aud": 760,
+      "payback_years": 10.3,
+      "stc_count": 57,
+      "stc_value_aud": 2280
+    },
+    {
+      "region": "SA1",
+      "usable_kwh": 20,
+      "scenario": "current",
+      "household_price_aud": 14172,
+      "annual_value_aud": 1520,
+      "payback_years": 9.3,
+      "stc_count": 119,
+      "stc_value_aud": 4760
+    },
+    {
+      "region": "SA1",
+      "usable_kwh": 20,
+      "scenario": "cut",
+      "household_price_aud": 14932,
+      "annual_value_aud": 1520,
+      "payback_years": 9.8,
+      "stc_count": 100,
+      "stc_value_aud": 4000
+    },
+    {
+      "region": "NSW1",
+      "usable_kwh": 10,
+      "scenario": "current",
+      "household_price_aud": 7384,
+      "annual_value_aud": 400,
+      "payback_years": 18.5,
+      "stc_count": 68,
+      "stc_value_aud": 2720
+    },
+    {
+      "region": "NSW1",
+      "usable_kwh": 10,
+      "scenario": "cut",
+      "household_price_aud": 7824,
+      "annual_value_aud": 400,
+      "payback_years": 19.6,
+      "stc_count": 57,
+      "stc_value_aud": 2280
+    },
+    {
+      "region": "NSW1",
+      "usable_kwh": 20,
+      "scenario": "current",
+      "household_price_aud": 14172,
+      "annual_value_aud": 800,
+      "payback_years": 17.7,
+      "stc_count": 119,
+      "stc_value_aud": 4760
+    },
+    {
+      "region": "NSW1",
+      "usable_kwh": 20,
+      "scenario": "cut",
+      "household_price_aud": 14932,
+      "annual_value_aud": 800,
+      "payback_years": 18.7,
+      "stc_count": 100,
+      "stc_value_aud": 4000
+    },
+    {
+      "region": "QLD1",
+      "usable_kwh": 10,
+      "scenario": "current",
+      "household_price_aud": 7384,
+      "annual_value_aud": 369,
+      "payback_years": 20.0,
+      "stc_count": 68,
+      "stc_value_aud": 2720
+    },
+    {
+      "region": "QLD1",
+      "usable_kwh": 10,
+      "scenario": "cut",
+      "household_price_aud": 7824,
+      "annual_value_aud": 369,
+      "payback_years": 21.2,
+      "stc_count": 57,
+      "stc_value_aud": 2280
+    },
+    {
+      "region": "QLD1",
+      "usable_kwh": 20,
+      "scenario": "current",
+      "household_price_aud": 14172,
+      "annual_value_aud": 738,
+      "payback_years": 19.2,
+      "stc_count": 119,
+      "stc_value_aud": 4760
+    },
+    {
+      "region": "QLD1",
+      "usable_kwh": 20,
+      "scenario": "cut",
+      "household_price_aud": 14932,
+      "annual_value_aud": 738,
+      "payback_years": 20.2,
+      "stc_count": 100,
+      "stc_value_aud": 4000
+    },
+    {
+      "region": "VIC1",
+      "usable_kwh": 10,
+      "scenario": "current",
+      "household_price_aud": 7384,
+      "annual_value_aud": 349,
+      "payback_years": 21.2,
+      "stc_count": 68,
+      "stc_value_aud": 2720
+    },
+    {
+      "region": "VIC1",
+      "usable_kwh": 10,
+      "scenario": "cut",
+      "household_price_aud": 7824,
+      "annual_value_aud": 349,
+      "payback_years": 22.4,
+      "stc_count": 57,
+      "stc_value_aud": 2280
+    },
+    {
+      "region": "VIC1",
+      "usable_kwh": 20,
+      "scenario": "current",
+      "household_price_aud": 14172,
+      "annual_value_aud": 697,
+      "payback_years": 20.3,
+      "stc_count": 119,
+      "stc_value_aud": 4760
+    },
+    {
+      "region": "VIC1",
+      "usable_kwh": 20,
+      "scenario": "cut",
+      "household_price_aud": 14932,
+      "annual_value_aud": 697,
+      "payback_years": 21.4,
+      "stc_count": 100,
+      "stc_value_aud": 4000
+    },
+    {
+      "region": "TAS1",
+      "usable_kwh": 10,
+      "scenario": "current",
+      "household_price_aud": 7384,
+      "annual_value_aud": 217,
+      "payback_years": 34.1,
+      "stc_count": 68,
+      "stc_value_aud": 2720
+    },
+    {
+      "region": "TAS1",
+      "usable_kwh": 10,
+      "scenario": "cut",
+      "household_price_aud": 7824,
+      "annual_value_aud": 217,
+      "payback_years": 36.1,
+      "stc_count": 57,
+      "stc_value_aud": 2280
+    },
+    {
+      "region": "TAS1",
+      "usable_kwh": 20,
+      "scenario": "current",
+      "household_price_aud": 14172,
+      "annual_value_aud": 434,
+      "payback_years": 32.7,
+      "stc_count": 119,
+      "stc_value_aud": 4760
+    },
+    {
+      "region": "TAS1",
+      "usable_kwh": 20,
+      "scenario": "cut",
+      "household_price_aud": 14932,
+      "annual_value_aud": 434,
+      "payback_years": 34.4,
+      "stc_count": 100,
+      "stc_value_aud": 4000
+    }
+  ],
+  "hourly": [
+    {
+      "region": "NSW1",
+      "hour_ending": 0,
+      "avg_rrp": 87.6
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 1,
+      "avg_rrp": 84.0
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 2,
+      "avg_rrp": 82.0
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 3,
+      "avg_rrp": 81.6
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 4,
+      "avg_rrp": 85.4
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 5,
+      "avg_rrp": 89.9
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 6,
+      "avg_rrp": 77.3
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 7,
+      "avg_rrp": 65.0
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 8,
+      "avg_rrp": 45.1
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 9,
+      "avg_rrp": 41.9
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 10,
+      "avg_rrp": 37.1
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 11,
+      "avg_rrp": 55.4
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 12,
+      "avg_rrp": 47.0
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 13,
+      "avg_rrp": 50.1
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 14,
+      "avg_rrp": 81.7
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 15,
+      "avg_rrp": 64.1
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 16,
+      "avg_rrp": 86.8
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 17,
+      "avg_rrp": 102.8
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 18,
+      "avg_rrp": 134.9
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 19,
+      "avg_rrp": 116.7
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 20,
+      "avg_rrp": 98.0
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 21,
+      "avg_rrp": 95.4
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 22,
+      "avg_rrp": 91.8
+    },
+    {
+      "region": "NSW1",
+      "hour_ending": 23,
+      "avg_rrp": 89.3
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 0,
+      "avg_rrp": 81.7
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 1,
+      "avg_rrp": 77.7
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 2,
+      "avg_rrp": 76.0
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 3,
+      "avg_rrp": 75.8
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 4,
+      "avg_rrp": 79.9
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 5,
+      "avg_rrp": 84.9
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 6,
+      "avg_rrp": 72.0
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 7,
+      "avg_rrp": 46.4
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 8,
+      "avg_rrp": 28.9
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 9,
+      "avg_rrp": 22.7
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 10,
+      "avg_rrp": 19.4
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 11,
+      "avg_rrp": 21.6
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 12,
+      "avg_rrp": 23.6
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 13,
+      "avg_rrp": 26.6
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 14,
+      "avg_rrp": 32.0
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 15,
+      "avg_rrp": 48.3
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 16,
+      "avg_rrp": 78.9
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 17,
+      "avg_rrp": 103.8
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 18,
+      "avg_rrp": 114.8
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 19,
+      "avg_rrp": 106.5
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 20,
+      "avg_rrp": 95.7
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 21,
+      "avg_rrp": 93.1
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 22,
+      "avg_rrp": 89.3
+    },
+    {
+      "region": "QLD1",
+      "hour_ending": 23,
+      "avg_rrp": 84.9
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 0,
+      "avg_rrp": 80.7
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 1,
+      "avg_rrp": 77.9
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 2,
+      "avg_rrp": 75.0
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 3,
+      "avg_rrp": 71.1
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 4,
+      "avg_rrp": 71.9
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 5,
+      "avg_rrp": 82.6
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 6,
+      "avg_rrp": 81.0
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 7,
+      "avg_rrp": 96.6
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 8,
+      "avg_rrp": 54.3
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 9,
+      "avg_rrp": 22.1
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 10,
+      "avg_rrp": 14.1
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 11,
+      "avg_rrp": 11.0
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 12,
+      "avg_rrp": 9.9
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 13,
+      "avg_rrp": 7.9
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 14,
+      "avg_rrp": 12.9
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 15,
+      "avg_rrp": 20.4
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 16,
+      "avg_rrp": 45.7
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 17,
+      "avg_rrp": 77.6
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 18,
+      "avg_rrp": 107.2
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 19,
+      "avg_rrp": 204.7
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 20,
+      "avg_rrp": 158.5
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 21,
+      "avg_rrp": 125.0
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 22,
+      "avg_rrp": 88.0
+    },
+    {
+      "region": "SA1",
+      "hour_ending": 23,
+      "avg_rrp": 80.1
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 0,
+      "avg_rrp": 74.2
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 1,
+      "avg_rrp": 72.1
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 2,
+      "avg_rrp": 70.2
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 3,
+      "avg_rrp": 70.2
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 4,
+      "avg_rrp": 71.7
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 5,
+      "avg_rrp": 76.0
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 6,
+      "avg_rrp": 79.6
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 7,
+      "avg_rrp": 75.5
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 8,
+      "avg_rrp": 68.3
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 9,
+      "avg_rrp": 61.1
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 10,
+      "avg_rrp": 56.6
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 11,
+      "avg_rrp": 55.4
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 12,
+      "avg_rrp": 53.5
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 13,
+      "avg_rrp": 53.8
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 14,
+      "avg_rrp": 54.0
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 15,
+      "avg_rrp": 59.2
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 16,
+      "avg_rrp": 84.1
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 17,
+      "avg_rrp": 92.7
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 18,
+      "avg_rrp": 93.7
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 19,
+      "avg_rrp": 94.7
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 20,
+      "avg_rrp": 86.2
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 21,
+      "avg_rrp": 82.3
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 22,
+      "avg_rrp": 77.6
+    },
+    {
+      "region": "TAS1",
+      "hour_ending": 23,
+      "avg_rrp": 76.6
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 0,
+      "avg_rrp": 59.7
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 1,
+      "avg_rrp": 55.8
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 2,
+      "avg_rrp": 52.1
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 3,
+      "avg_rrp": 50.4
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 4,
+      "avg_rrp": 52.1
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 5,
+      "avg_rrp": 57.5
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 6,
+      "avg_rrp": 56.0
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 7,
+      "avg_rrp": 46.2
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 8,
+      "avg_rrp": 31.8
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 9,
+      "avg_rrp": 21.0
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 10,
+      "avg_rrp": 15.4
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 11,
+      "avg_rrp": 14.1
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 12,
+      "avg_rrp": 12.1
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 13,
+      "avg_rrp": 13.0
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 14,
+      "avg_rrp": 14.9
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 15,
+      "avg_rrp": 25.6
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 16,
+      "avg_rrp": 50.8
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 17,
+      "avg_rrp": 73.9
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 18,
+      "avg_rrp": 82.2
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 19,
+      "avg_rrp": 90.0
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 20,
+      "avg_rrp": 78.0
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 21,
+      "avg_rrp": 71.5
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 22,
+      "avg_rrp": 64.7
+    },
+    {
+      "region": "VIC1",
+      "hour_ending": 23,
+      "avg_rrp": 64.3
+    }
+  ],
+  "postcodes_by_solar": [
+    {
+      "postcode": "2765",
+      "state": "NSW",
+      "batteries": 4434,
+      "dwellings": 13386,
+      "solar": 15735,
+      "per_1000_dwellings": 331.2,
+      "per_1000_solar": 281.8
+    },
+    {
+      "postcode": "2154",
+      "state": "NSW",
+      "batteries": 1679,
+      "dwellings": 13224,
+      "solar": 6062,
+      "per_1000_dwellings": 127.0,
+      "per_1000_solar": 277.0
+    },
+    {
+      "postcode": "2155",
+      "state": "NSW",
+      "batteries": 3842,
+      "dwellings": 22542,
+      "solar": 14940,
+      "per_1000_dwellings": 170.4,
+      "per_1000_solar": 257.2
+    },
+    {
+      "postcode": "2153",
+      "state": "NSW",
+      "batteries": 2468,
+      "dwellings": 20591,
+      "solar": 9781,
+      "per_1000_dwellings": 119.9,
+      "per_1000_solar": 252.3
+    },
+    {
+      "postcode": "2763",
+      "state": "NSW",
+      "batteries": 1328,
+      "dwellings": 10301,
+      "solar": 5770,
+      "per_1000_dwellings": 128.9,
+      "per_1000_solar": 230.2
+    },
+    {
+      "postcode": "2179",
+      "state": "NSW",
+      "batteries": 1309,
+      "dwellings": 4861,
+      "solar": 5689,
+      "per_1000_dwellings": 269.3,
+      "per_1000_solar": 230.1
+    },
+    {
+      "postcode": "2768",
+      "state": "NSW",
+      "batteries": 1289,
+      "dwellings": 8087,
+      "solar": 5732,
+      "per_1000_dwellings": 159.4,
+      "per_1000_solar": 224.9
+    },
+    {
+      "postcode": "3150",
+      "state": "VIC",
+      "batteries": 1778,
+      "dwellings": 21719,
+      "solar": 8093,
+      "per_1000_dwellings": 81.9,
+      "per_1000_solar": 219.7
+    }
+  ],
+  "postcodes_low_uptake": [
+    {
+      "postcode": "7250",
+      "state": "TAS",
+      "batteries": 382,
+      "dwellings": 20611,
+      "solar": 5726,
+      "per_1000_dwellings": 18.5,
+      "per_1000_solar": 66.7
+    },
+    {
+      "postcode": "4215",
+      "state": "QLD",
+      "batteries": 456,
+      "dwellings": 23596,
+      "solar": 5519,
+      "per_1000_dwellings": 19.3,
+      "per_1000_solar": 82.6
+    },
+    {
+      "postcode": "3214",
+      "state": "VIC",
+      "batteries": 183,
+      "dwellings": 9312,
+      "solar": 3013,
+      "per_1000_dwellings": 19.7,
+      "per_1000_solar": 60.7
+    },
+    {
+      "postcode": "3073",
+      "state": "VIC",
+      "batteries": 408,
+      "dwellings": 20261,
+      "solar": 4479,
+      "per_1000_dwellings": 20.1,
+      "per_1000_solar": 91.1
+    },
+    {
+      "postcode": "0810",
+      "state": "NT",
+      "batteries": 261,
+      "dwellings": 11637,
+      "solar": 4462,
+      "per_1000_dwellings": 22.4,
+      "per_1000_solar": 58.5
+    },
+    {
+      "postcode": "3072",
+      "state": "VIC",
+      "batteries": 319,
+      "dwellings": 13645,
+      "solar": 3224,
+      "per_1000_dwellings": 23.4,
+      "per_1000_solar": 98.9
+    },
+    {
+      "postcode": "4114",
+      "state": "QLD",
+      "batteries": 227,
+      "dwellings": 9413,
+      "solar": 3981,
+      "per_1000_dwellings": 24.1,
+      "per_1000_solar": 57.0
+    },
+    {
+      "postcode": "3500",
+      "state": "VIC",
+      "batteries": 330,
+      "dwellings": 13319,
+      "solar": 5657,
+      "per_1000_dwellings": 24.8,
+      "per_1000_solar": 58.3
+    }
+  ],
+  "national": {
+    "batteries": 546789,
+    "gwh": 15.29,
+    "dwellings": 9275066,
+    "per_1000": 58.9,
+    "april": 87128,
+    "may": 23679,
+    "drop_pct": 72.8
+  },
+  "callouts": {
+    "sa_years": 9.7,
+    "sa_years_cut": 10.3,
+    "tas_years": 34.1,
+    "tas_years_cut": 36.1,
+    "nsw_years": 18.5,
+    "sa_spread": 207.0,
+    "tas_spread": 64.0,
+    "sa_charge": -8.0,
+    "sa_per_1000": 87.5,
+    "tas_per_1000": 26.0,
+    "extra_years_sa": 0.6,
+    "price_gap_10kwh": 440
+  },
+  "assumptions": {
+    "sizes_kwh": [
+      10,
+      20
+    ],
+    "net_price_aud": {
+      "10": 7384,
+      "20": 14172
+    },
+    "round_trip_efficiency": 0.9,
+    "stc_price_aud": 40.0,
+    "factor_current": 6.8,
+    "factor_cut": 5.7,
+    "time_label": "NEM market time (AEST, no daylight-saving shift)"
+  },
+  "means": {
+    "overview": "The rebate did what rebates do: people brought installations forward. April 2026 was the last full month of the richer discount, and May was much quieter. The national count here is certificates already approved, not the higher figure ministers quoted in November, which includes batteries still waiting to be processed.",
+    "where": "South Australia has the most batteries for the number of homes counted in 2021. Tasmania and the Northern Territory have the fewest. New South Wales has the largest number of batteries, because it has the most homes, not because uptake is the most intense. Western Australia and the Northern Territory are not in the east-coast wholesale market, so this page does not price a battery there.",
+    "payback": "These years count only the money from charging when wholesale power is cheap and discharging when it is expensive. They do not count storing a household's own rooftop solar, which is often the larger saving, or any network payment. On that wholesale-only view, South Australia is the only region close to a 10-year warranty. The next scheduled cut in the discount, from January 2027, adds about 0.6 years in South Australia. It does not change which region pays back fastest.",
+    "prices": "In South Australia the cheapest two midday hours averaged about $-8 per megawatt-hour over the year, so a battery was often paid to charge. About 29% of South Australian intervals had a negative price, against 5% in Tasmania. That gap, not the number of batteries, is why a South Australian battery earns more from price swings.",
+    "action": "A household should not buy a battery on wholesale swings alone unless they are in South Australia and happy with a payback near the warranty. Ask the installer for the price after the federal discount, and treat quotes that assume two full cycles every day as optimistic. A retailer with customers in South Australia or Victoria is sitting on the most negative midday prices. A government cutting the discount further will slow installations, as May 2026 already showed, and will lengthen wholesale payback most where the price swings are smallest."
+  },
+  "sources": [
+    {
+      "name": "Clean Energy Regulator, small-scale installation postcode data",
+      "licence": "CC BY 4.0",
+      "as_at": "30 September 2026 (page updated 20 October 2026)"
+    },
+    {
+      "name": "AEMO aggregated price and demand",
+      "licence": "Reuse allowed with attribution to AEMO",
+      "as_at": "1 November 2025 to 31 October 2026, NEM market time (AEST, no daylight-saving shift)"
+    },
+    {
+      "name": "ABS Census 2021, General Community Profile table G34, postal areas",
+      "licence": "CC BY 4.0",
+      "as_at": "Census night 10 August 2021"
+    },
+    {
+      "name": "Solar Choice Battery Price Index",
+      "licence": "Published prices, cited as the cost assumption",
+      "as_at": "6 November 2026"
+    },
+    {
+      "name": "DCCEEW Cheaper Home Batteries Program, STC factor table",
+      "licence": "Australian Government public information",
+      "as_at": "Factor 6.8 until 31 December 2026, then 5.7"
+    }
+  ],
+  "access_date": "2026-11-10"
+}

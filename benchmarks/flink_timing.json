@@ -1,0 +1,6 @@
+{
+  "job": "tumble 1 day, one region, one day of real 5-minute prices",
+  "rows": 288,
+  "ms": 7171.0,
+  "note": "PyFlink 2.1.1 local mini cluster, Java 17. Startup dominates. The lateness test is separate and asserts window contents."
+}
